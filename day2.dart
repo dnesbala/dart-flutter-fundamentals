@@ -29,12 +29,7 @@ void main() {
 }
 
 
-// List, Map
-// map, where method
-// null safety
+// Null safety
 // oop => class, objects, coonstructors, named constructors
 // getter, setter, static
 // inheritance
-
-
-// map: odd list, even odd
