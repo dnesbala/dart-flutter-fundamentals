@@ -27,9 +27,3 @@ void main() {
   List<String> names = ["test", "tester", "designer"];
   print(names.map((e) => e.toUpperCase()));
 }
-
-
-// Null safety
-// oop => class, objects, coonstructors, named constructors
-// getter, setter, static
-// inheritance
