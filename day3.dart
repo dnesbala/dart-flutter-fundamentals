@@ -88,7 +88,7 @@ void main() {
   print("Laptop Name: ${laptop["name"]}");
   print("Laptop has key ramsadf:  ${laptop["ramsadf"]}"); // gives null
 
-  // String name = null;  // Error: As null can't be assigned to int
+  // String name = null;  // Error: As null can't be assigned to String
   String? name = null; // ? makes the name nullable i.e. it can take null values
 
   print(name?.toUpperCase()); // null aware operator ?.
