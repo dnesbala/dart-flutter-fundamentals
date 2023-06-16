@@ -19,29 +19,34 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: Text("My App"),
-        ),
-        // use Column to display multiple widgets in a vertical direction
-        body: Column(
-          children: [
-            Text(
-              "Hello World!!",
-              style: TextStyle(
-                color: Colors.teal,
-                fontSize: 30.0,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            Icon(Icons.info_outline, size: 40, color: Colors.red),
-            ElevatedButton(
-              onPressed: () {
-                print("Button Pressed");
-              },
-              child: Text("Press Me"),
-            ),
-          ],
-        ),
+        body: HomeScreen(),
+      ),
+    );
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      height: 200,
+      width: 200,
+      decoration: BoxDecoration(
+        color: Colors.green,
+        shape: BoxShape.circle,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: Colors.white, width: 2),
+      ),
+      child: Column(
+        children: [
+          // Changes should be done in pubspec.yaml file for asset images
+          Image.asset("assets/tree.jpeg", height: 100, width: 150),
+          // Image.network("https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg", height: 100, width: 150),
+          Text("Hello World"),
+        ],
       ),
     );
   }
