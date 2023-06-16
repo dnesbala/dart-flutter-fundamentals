@@ -1,3 +1,4 @@
+import 'package:firstapp/row_column_test.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: HomeScreen(),
+        body: RowColumnTest(),
       ),
     );
   }
