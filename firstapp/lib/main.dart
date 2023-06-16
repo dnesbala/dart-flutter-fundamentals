@@ -1,5 +1,7 @@
-import 'package:firstapp/row_column_test.dart';
 import 'package:flutter/material.dart';
+
+import 'package:firstapp/insta_home_page.dart';
+import 'package:firstapp/row_column_test.dart';
 
 void main() {
   runApp(
@@ -20,7 +22,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: RowColumnTest(),
+        body: InstaHomePage(),
       ),
     );
   }
