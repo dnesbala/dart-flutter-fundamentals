@@ -47,12 +47,29 @@ class InstaPost extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(
-          width: double.maxFinite,
-          child: Image.asset(
-            postPic,
-            fit: BoxFit.cover,
-          ),
+        Stack(
+          alignment: Alignment.topRight,
+          children: [
+            SizedBox(
+              width: double.maxFinite,
+              child: Image.asset(
+                postPic,
+                fit: BoxFit.cover,
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(right: 10, top: 8),
+              decoration: BoxDecoration(
+                color: Colors.black,
+                borderRadius: BorderRadius.circular(30),
+              ),
+              padding: EdgeInsets.all(10),
+              child: Text(
+                "1/4",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ],
         ),
         SizedBox(height: 5),
         Text(
