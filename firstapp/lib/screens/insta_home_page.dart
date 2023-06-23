@@ -1,5 +1,7 @@
-import 'package:firstapp/insta_post.dart';
-import 'package:firstapp/post_data.dart';
+import 'package:firstapp/data/post_data.dart';
+import 'package:firstapp/data/story_data.dart';
+import 'package:firstapp/widgets/insta_post.dart';
+import 'package:firstapp/widgets/story_widget.dart';
 import 'package:flutter/material.dart';
 
 class InstaHomePage extends StatelessWidget {
@@ -35,6 +37,22 @@ class InstaHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: "",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.verified_user),
+            label: "",
+          ),
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: SingleChildScrollView(
@@ -61,6 +79,18 @@ class InstaHomePage extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Text("Stories Section"),
+              SizedBox(height: 10),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: stories
+                      .map((story) => Padding(
+                            padding: const EdgeInsets.only(right: 10),
+                            child: StoryWidget(story: story),
+                          ))
+                      .toList(),
+                ),
+              ),
               SizedBox(height: 20),
               ...posts
                   .map((e) => InstaPost(

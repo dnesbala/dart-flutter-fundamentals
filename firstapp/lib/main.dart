@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:firstapp/insta_home_page.dart';
+import 'package:firstapp/screens/insta_home_page.dart';
 
 void main() {
   runApp(

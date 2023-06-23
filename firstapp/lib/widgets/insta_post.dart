@@ -1,3 +1,4 @@
+import 'package:firstapp/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class InstaPost extends StatelessWidget {
@@ -20,17 +21,23 @@ class InstaPost extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Row(
-              children: [
-                CircleAvatar(
-                  radius: 18,
-                  backgroundImage: AssetImage(
-                    profilePic,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ProfileScreen()));
+              },
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    radius: 18,
+                    backgroundImage: AssetImage(
+                      profilePic,
+                    ),
                   ),
-                ),
-                SizedBox(width: 10),
-                Text(username, style: TextStyle(fontWeight: FontWeight.bold)),
-              ],
+                  SizedBox(width: 10),
+                  Text(username, style: TextStyle(fontWeight: FontWeight.bold)),
+                ],
+              ),
             ),
             IconButton(
               onPressed: () {
