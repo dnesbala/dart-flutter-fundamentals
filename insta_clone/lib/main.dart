@@ -1,3 +1,4 @@
+import 'package:firstapp/stateful_test.dart';
 import 'package:flutter/material.dart';
 
 import 'package:firstapp/screens/insta_home_page.dart';
@@ -7,7 +8,7 @@ void main() {
     const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Instagram Clone",
-      home: HomePage(),
+      home: StatefulTest(),
     ),
   );
 }
