@@ -1,5 +1,6 @@
 import 'package:firstapp/login_page.dart';
 import 'package:firstapp/score_page.dart';
+import 'package:firstapp/screens/si_calculator.dart';
 import 'package:firstapp/stateful_test.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,7 @@ void main() {
     const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Instagram Clone",
-      home: LoginPage(),
+      home: SICalculator(),
     ),
   );
 }
